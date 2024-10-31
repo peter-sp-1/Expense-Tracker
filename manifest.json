@@ -1,0 +1,30 @@
+{
+    "name": "Expense Tracker",
+    "short_name": "Expense",
+    "description": "A simple expense tracker app",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "screenshots": [
+        {
+            "src": "./img/screenshot.png",
+            "sizes": "1304x580",
+            "type": "image/png",
+            "form_factor": "wide"
+        },
+        {
+            "src": "./img/screenshot-narrow.png",
+            "sizes": "534x584",
+            "type": "image/png",
+            "form_factor": "narrow"
+        }
+    ],
+    "icons": [
+        {
+            "src": "./img/budget_781760.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

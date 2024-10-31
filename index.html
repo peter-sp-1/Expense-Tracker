@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/budget_781760.png" type="image/png">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <!-- Table for adding and displaying expenses -->
+        <table id="expense-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount(Naira)</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="expense-tbody">
+                <!-- Initial empty row for user input-->
+                 <tr>
+                    <td><input type="text" id="new-description" placeholder="Description"></input></td>
+                    <td><input type="text" id="new-amount" placeholder="Amount"></input></td>
+                    <td><input type="date" id="new-date"></input></td>
+                    <td><button onclick="addExpense()">Add Expense</button></td>
+                 </tr>
+            </tbody>
+        </table>
+        <!-- Display Total Expenses -->
+         <div class="total">
+            <h2>Total: N<span id="total">0.00 </span></h2>
+         </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js')
+            .then(registration => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(error => {
+                console.error('Service Worker registration failed:', error);
+            });
+        }
+    </script>
+</body>
+</html>
